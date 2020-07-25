@@ -20,3 +20,14 @@ for (let [key,value] of Object.entries(map)) {
         return key
     }
 }
+
+
+//O(n) solution that uses a XOR bitwise operator to find the unique element
+//a ⊕ b ⊕ a = (a ⊕ a) ⊕ b = 0 ⊕ b = b
+
+let a = 0
+for (let num of nums) {
+    a ^= num
+}
+
+return a
